@@ -2,6 +2,8 @@
 $directory = 'docs';
 $request = $directory . $_SERVER['REQUEST_URI'];
 
+include 'includes/head.php';
+
 if (is_dir($request)) {
 
   $folders = array();
@@ -33,4 +35,6 @@ if (is_dir($request)) {
 } else {
   http_response_code(404);
 }
+
+include 'includes/footer.php';
 ?>
