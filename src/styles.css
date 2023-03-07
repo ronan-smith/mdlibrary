@@ -1,0 +1,23 @@
+/* Font */
+@font-face {
+  font-family: "poppins";
+  font-weight: 300;
+  src: url("/fonts/poppins-light.woff2") format("woff2"),
+  url("/fonts/poppins-light.woff") format("woff");
+}
+
+/* Document */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "poppins";
+  font-size: 112.5%;
+}
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 100%;
+  }
+}
