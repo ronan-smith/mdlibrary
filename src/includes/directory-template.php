@@ -1,7 +1,9 @@
 <main>
 
+<input type="text" id="search" onkeyup="myFunction()" placeholder="Search folder..."/>
+
 <section>
-  <ul>
+  <ul id="results">
     <?php foreach ($folders as $folder): ?>
     <li><a href="<?=strtolower($folder)?>"><?=trim(basename($folder), '/')?></a></li>
     <?php endforeach; ?>
