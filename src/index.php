@@ -24,10 +24,11 @@ if (is_dir($request)) {
 } elseif (is_file($request . '.md')) {
   
   include('includes/Parsedown.php');
-  $markdown = file_get_contents($request . '.md');
+  $file = file_get_contents($request . '.md');
   $Parsedown = new Parsedown();
+  $markdown = $Parsedown->text($file);
 
-  echo $Parsedown->text($markdown);
+  include 'includes/document-template.php';
 
 } else {
   http_response_code(404);
