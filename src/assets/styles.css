@@ -6,6 +6,16 @@
   url("/assets/fonts/inter-regular.woff") format("woff");
 }
 
+/* Variables */
+:root {
+  --foreground-color: #dcdcdc;
+  --background-color: #050505;
+}
+.light-mode {
+  --foreground-color: #232323;
+  --background-color: #fafafa;
+}
+
 /* Document */
 *, *:before, *:after {
   box-sizing: border-box;
@@ -13,4 +23,10 @@
 html {
   box-sizing: border-box;
   font-family: "inter";
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+  margin: 0;
 }

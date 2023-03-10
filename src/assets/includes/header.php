@@ -1,3 +1,10 @@
+<?php
+// Detect preferred theme
+$theme = '';
+if (!empty($_COOKIE['light-mode']) && $_COOKIE['light-mode'] == 'true') {
+  $theme = 'class="light-mode"';
+}
+?>
 <!DOCTYPE html>
 <html lang="en-GB" dir="ltr">
 <head>
@@ -14,7 +21,7 @@
   <link rel="stylesheet" href="/assets/styles.css"/>
   <script defer src="/assets/functions.js" charset="utf-8"></script>
 </head>
-<body>
+<body <?=$theme?>>
 
 <!-- Navigation Controls -->
 <nav id="nav" class="container">

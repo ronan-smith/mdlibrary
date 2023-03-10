@@ -1,3 +1,4 @@
+// Search directory list:
 function filterList() {
   var input, filter, ul, li, a, i, txtValue;
   input = document.getElementById('search');
@@ -15,3 +16,14 @@ function filterList() {
     }
   }
 }
+
+// Toggle light-mode theme:
+const themeButton = document.getElementById("toggle");
+
+themeButton.addEventListener("click", function() {
+  document.body.classList.toggle("light-mode");
+
+  // Detect which theme was switched and set cookie
+  var themePref = document.body.classList.contains("light-mode") ? "true" : "false";
+  document.cookie = "light-mode=" + themePref + "; path=/";
+});
