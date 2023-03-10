@@ -1,4 +1,4 @@
-function myFunction() {
+function filterList() {
   var input, filter, ul, li, a, i, txtValue;
   input = document.getElementById('search');
   filter = input.value.toUpperCase();
