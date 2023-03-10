@@ -26,15 +26,19 @@ if (!empty($_COOKIE['light-mode']) && $_COOKIE['light-mode'] == 'true') {
 <!-- Navigation Controls -->
 <nav id="nav" class="container">
   <div>
+    <?php if ($request != $docs_folder . '/'): ?>
     <a href="<?=substr(rtrim($_SERVER['REQUEST_URI'], '/'), 0, strrpos(rtrim($_SERVER['REQUEST_URI'], '/'), '/')+1)?>">
       <i class="fa-solid fa-angle-left"></i>
     </a>
+    <?php endif; ?>
     <span><?=$name_prefix?> <span><?=$page_name?></span></span>
   </div>
   <div>
+    <?php if ($request != $docs_folder . '/'): ?>
     <a href="/">
       <i class="fa-solid fa-house"></i>
     </a>
+    <?php endif; ?>
     <button id="toggle" type="button">
       <i class="fa-solid fa-circle-half-stroke"></i>
     </button>
