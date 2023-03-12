@@ -1,7 +1,7 @@
 // Search directory list:
 function filterList() {
   var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById('search');
+  input = document.querySelector("#search input");
   filter = input.value.toUpperCase();
   ul = document.getElementById("results");
   li = ul.getElementsByTagName('li');

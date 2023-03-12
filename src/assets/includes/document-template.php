@@ -1,3 +1,3 @@
-<section>
+<section class="container">
   <?=$markdown?>
 </section>
