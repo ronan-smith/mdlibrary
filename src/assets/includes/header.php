@@ -20,6 +20,8 @@ if (!empty($_COOKIE['light-mode']) && $_COOKIE['light-mode'] == 'true') {
   <!-- Resources -->
   <link rel="stylesheet" href="/assets/styles.css"/>
   <script defer src="/assets/functions.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="/assets/highlight/atom-one-light.min.css">
+  <script src="/assets/highlight/highlight.min.js"></script>
 </head>
 <body <?=$theme?>>
 

@@ -164,7 +164,8 @@ button:hover {
 
 /* Code */
 code {
-  background-color: var(--code-color);
+  background-color: var(--code-color) !important;
+  color: var(--foreground-color) !important;
   border-radius: var(--border-radius);
 }
 code:not(p code) {

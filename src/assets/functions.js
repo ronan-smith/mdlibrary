@@ -35,3 +35,6 @@ themeButton.addEventListener("click", function() {
   var themePref = document.body.classList.contains("light-mode") ? "true" : "false";
   document.cookie = "light-mode=" + themePref + "; path=/";
 });
+
+// Syntax highlighting:
+hljs.highlightAll();
