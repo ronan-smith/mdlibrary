@@ -1,12 +1,18 @@
 // Search directory list:
 function filterList() {
-  var input, filter, ul, li, a, i, txtValue, count = 0;
-  input = document.querySelector("#search input");
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("results");
-  li = ul.getElementsByTagName('li');
+  // Get search bar, results list and items in list
+  const input = document.querySelector("#search input");
+  const ul = document.getElementById("results");
+  const li = ul.getElementsByTagName('li');
 
-  for (i = 0; i < li.length; i++) {
+  // Declare vars for later use
+  var a, txtValue, count = 0;
+
+  // Normalise input so it's case-insensitive
+  var filter = input.value.toUpperCase();
+
+  // Loop through each list item
+  for (var i = 0; i < li.length; i++) {
     a = li[i].getElementsByTagName("a")[0];
     txtValue = a.textContent || a.innerText;
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -17,8 +23,9 @@ function filterList() {
     }
   }
 
-  // Show no results error
+  // Check if all list items had been hidden
   if (count == li.length) {
+    // Display non-found message
     document.getElementById("resultless").style.visibility = "visible";
   } else {
     document.getElementById("resultless").style.visibility = "hidden";
@@ -36,5 +43,5 @@ themeButton.addEventListener("click", function() {
   document.cookie = "light-mode=" + themePref + "; path=/";
 });
 
-// Syntax highlighting:
+// Call highlight.js:
 hljs.highlightAll();
