@@ -12,12 +12,14 @@
   --foreground-color: #bbbbbb;
   --code-color: #1b1b1b;
   --background-color: #212121;
+  --secondary-background-color: #161616;
 }
 .light-mode {
   --highlight-color: #000;
   --foreground-color: #636363;
   --code-color: #e6e6e6;
   --background-color: #d8d8d8;
+  --secondary-background-color: #f4f4f4;
 }
 
 /* Document */
@@ -126,21 +128,24 @@ button:hover {
   background-color: var(--code-color);
   margin-bottom: 10px;
   border-radius: 7px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
+}
+#results .folder {
+  background-color: var(--secondary-background-color);
 }
 #results li:hover {
   background-color: var(--foreground-color);
   color: var(--background-color);
 }
 #results a {
-  display: block;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
 }
 #results i {
   opacity: .25;
+  padding-left: 10px;
 }
 
 /* Code */
