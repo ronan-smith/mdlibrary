@@ -114,6 +114,7 @@ button:hover {
 #search input {
   border: none;
   background: none;
+  color: var(--foreground-color);
   font-size: 1em;
   font-family: "inter";
   width: 100%;
@@ -150,6 +151,15 @@ button:hover {
 #results i {
   opacity: .25;
   padding-left: 10px;
+}
+
+#resultless {
+  opacity: .45;
+  visibility: hidden;
+  display: block;
+  padding: var(--padding);
+  border: 1px solid var(--foreground-color);
+  border-radius: var(--border-radius);
 }
 
 /* Code */

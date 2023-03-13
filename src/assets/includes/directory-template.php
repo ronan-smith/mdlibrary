@@ -19,4 +19,5 @@
     </li>
     <?php endforeach; ?>
   </ul>
+  <span id="resultless">No results found in current folder</span>
 </section>

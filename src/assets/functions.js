@@ -1,6 +1,6 @@
 // Search directory list:
 function filterList() {
-  var input, filter, ul, li, a, i, txtValue;
+  var input, filter, ul, li, a, i, txtValue, count = 0;
   input = document.querySelector("#search input");
   filter = input.value.toUpperCase();
   ul = document.getElementById("results");
@@ -13,7 +13,15 @@ function filterList() {
       li[i].style.display = "";
     } else {
       li[i].style.display = "none";
+      count++;
     }
+  }
+
+  // Show no results error
+  if (count == li.length) {
+    document.getElementById("resultless").style.visibility = "visible";
+  } else {
+    document.getElementById("resultless").style.visibility = "hidden";
   }
 }
 
