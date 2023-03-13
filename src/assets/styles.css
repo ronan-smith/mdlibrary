@@ -35,6 +35,11 @@ html {
   font-size: 115%;
   line-height: 1.3em;
 }
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 100%;
+  }
+}
 
 body {
   background-color: var(--background-color);
@@ -83,13 +88,21 @@ strong {
 }
 
 /* Navigation */
-nav {
-  display: flex;
-  justify-content: space-between;
+nav div {
   padding-bottom: 30px;
+}
+nav .home {
+  margin-right: var(--padding);
 }
 nav span span {
   color: var(--highlight-color);
+}
+@media screen and (min-width: 600px) {
+  nav {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
 }
 
 button {
@@ -97,6 +110,7 @@ button {
   border: none;
   color: var(--foreground-color);
   font-size: 1em;
+  padding: 0;
 }
 button:hover {
   color: var(--highlight-color);
@@ -150,6 +164,11 @@ button:hover {
 #results i {
   opacity: .25;
   padding-left: 10px;
+}
+@media screen and (max-width: 425px) {
+  #results i {
+    display: none;
+  }
 }
 
 #resultless {
