@@ -61,6 +61,7 @@ code::-webkit-scrollbar-thumb:hover {
 a {
   color: var(--foreground-color);
   text-decoration: none;
+  transition: 300ms ease-out color;
 }
 p a {
   text-decoration: underline;
@@ -131,13 +132,13 @@ button:hover {
   background-color: var(--code-color);
   margin-bottom: var(--padding);
   border-radius: var(--border-radius);
+  transition: 300ms ease-out opacity;
 }
 #results .folder {
   background-color: var(--secondary-background-color);
 }
 #results li:hover {
-  background-color: var(--foreground-color);
-  color: var(--background-color);
+  opacity: .35;
 }
 #results a {
   width: 100%;
