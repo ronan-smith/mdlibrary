@@ -10,13 +10,13 @@
 :root {
   --highlight-color: #fff;
   --foreground-color: #bbbbbb;
-  --code-colour: #1b1b1b;
+  --code-color: #1b1b1b;
   --background-color: #212121;
 }
 .light-mode {
   --highlight-color: #000;
   --foreground-color: #636363;
-  --code-colour: #e6e6e6;
+  --code-color: #e6e6e6;
   --background-color: #d8d8d8;
 }
 
@@ -39,7 +39,7 @@ body {
 }
 body::-webkit-scrollbar,
 code::-webkit-scrollbar {
-  background: var(--code-colour);
+  background: var(--code-color);
   width: 6px;
   height: 6px;
 }
@@ -123,7 +123,7 @@ button:hover {
   padding: 0;
 }
 #results li {
-  background-color: var(--code-colour);
+  background-color: var(--code-color);
   margin-bottom: 10px;
   border-radius: 7px;
   display: flex;
@@ -145,7 +145,7 @@ button:hover {
 
 /* Code */
 code {
-  background-color: var(--code-colour);
+  background-color: var(--code-color);
   border-radius: 7px;
   position: relative;
 }
