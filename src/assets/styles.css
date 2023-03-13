@@ -13,6 +13,9 @@
   --code-color: #1b1b1b;
   --background-color: #212121;
   --secondary-background-color: #161616;
+
+  --border-radius: 8px;
+  --padding: 15px;
 }
 .light-mode {
   --highlight-color: #000;
@@ -101,9 +104,9 @@ button:hover {
 
 /* Directory List */
 #search {
-  padding: 10px;
+  padding: 10px var(--padding);
   border: 1px solid var(--foreground-color);
-  border-radius: 7px;
+  border-radius: var(--border-radius);
   display: flex;
   align-items: center;
 }
@@ -126,8 +129,8 @@ button:hover {
 }
 #results li {
   background-color: var(--code-color);
-  margin-bottom: 10px;
-  border-radius: 7px;
+  margin-bottom: var(--padding);
+  border-radius: var(--border-radius);
 }
 #results .folder {
   background-color: var(--secondary-background-color);
@@ -141,7 +144,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: var(--padding);
 }
 #results i {
   opacity: .25;
@@ -151,12 +154,11 @@ button:hover {
 /* Code */
 code {
   background-color: var(--code-color);
-  border-radius: 7px;
-  position: relative;
+  border-radius: var(--border-radius);
 }
 code:not(p code) {
   display: block;
-  padding: 15px;
+  padding: var(--padding);
   overflow-y: hidden;
 }
 p code {
